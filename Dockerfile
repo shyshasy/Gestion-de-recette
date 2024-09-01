@@ -25,4 +25,5 @@ COPY --from=build-stage /app/dist /usr/share/nginx/html
 # Exposer le port 80 pour permettre l'accès à l'application
 EXPOSE 80
 
-# Nginx démarrera automatiquement
+# Démarrer Nginx en mode premier plan
+CMD ["nginx", "-g", "daemon off;"]
