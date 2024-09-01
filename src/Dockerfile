@@ -25,5 +25,4 @@ COPY --from=build-stage /app/dist /usr/share/nginx/html
 # Exposer le port 80 pour permettre l'accès à l'application
 EXPOSE 80
 
-# Démarrer nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Nginx démarrera automatiquement
