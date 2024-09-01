@@ -3,7 +3,7 @@ import Home from '../components/Home.vue';
 import AddRecipe from '../components/AddRecipe.vue';
 import RecipeList from '../components/RecipeList.vue';
 import RecipeDetails from '../components/RecipeDetails.vue';
-import EditRecipe from '../components/EditRecipe.vue'; // Assure-toi que ce composant existe
+import EditRecipe from '../components/EditRecipe.vue'; 
 
 const routes = [
   { path: '/', component: Home, name: 'home' },
