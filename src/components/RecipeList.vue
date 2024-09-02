@@ -31,16 +31,14 @@ export default {
     const successMessage = ref('');
 
     function handleDeleteRecipe(id) {
-      if (confirm('Êtes-vous sûr de vouloir supprimer cette recette ?')) {
-        recipeStore.deleteRecipe(id)
-          .then(() => {
-            successMessage.value = 'Recette supprimée avec succès';
-            setTimeout(() => {
-              successMessage.value = ''; // Clear the message after 3 seconds
-            }, 3000);
-          });
-      }
-    }
+  if (confirm('Êtes-vous sûr de vouloir supprimer cette recette ?')) {
+    recipeStore.deleteRecipe(id);  // Appel direct de la fonction synchrone
+    successMessage.value = 'Recette supprimée avec succès';
+    setTimeout(() => {
+      successMessage.value = ''; // Efface le message après 3 secondes
+    }, 3000);
+  }
+}
 
     return { 
       recipes: computed(() => recipeStore.recipes),
